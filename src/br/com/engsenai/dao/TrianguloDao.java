@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import br.com.engsenai.model.Retangulo;
 import br.com.engsenai.model.Triangulo;
+import br.com.engsenai.ui.Menu;
 
 public class TrianguloDao {
 
@@ -21,6 +22,7 @@ public class TrianguloDao {
 
 		triangulo.mostrarDados();
 
-		leitor.close();
+		Menu.continuar(leitor, "Gabryel");
+
 	}
 }

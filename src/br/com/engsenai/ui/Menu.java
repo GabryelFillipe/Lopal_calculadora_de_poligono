@@ -30,22 +30,36 @@ public class Menu {
 
 		if (opcao == 1) {
 			QuadradoDao.criarQuadrado();
-		}
-		if (opcao == 2) {
+		} else if (opcao == 2) {
 			RetanguloDao.criarRetangulo();
-		}
-		if (opcao == 3) {
+		} else if (opcao == 3) {
 			TrapezioDao.criarTrapezio();
 		}
 
-		if (opcao == 4) {
+		else if (opcao == 4) {
 			CircunferenciaDao.criarCircunferencia();
 		}
 
-		if (opcao == 5) {
+		else if (opcao == 5) {
 			TrianguloDao.criarTriangulo();
 		} else {
 			System.out.println("Esta opção ainda não foi implementada, ou o número digitado não é válido.");
 		}
+	}
+
+	public static void continuar(Scanner leitor, String nome) {
+
+		
+		String resposta = "";
+
+		while(!resposta.equals("s")|| !resposta.equals("n")) {
+			System.out.print(nome + ", digite S para continuar ou N para sair...");
+			resposta =leitor.next();
+		}
+			
+		if (resposta.equalsIgnoreCase("S")) {
+			Menu.mostrarMenu();
+		}
+
 	}
 }

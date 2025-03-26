@@ -4,13 +4,13 @@ import java.util.Scanner;
 
 import br.com.engsenai.model.Circunferencia;
 import br.com.engsenai.model.Retangulo;
+import br.com.engsenai.ui.Menu;
 
 public class RetanguloDao {
 
 	public static void criarRetangulo() {
 		Retangulo retangulo = new Retangulo();
 
-	
 		Scanner leitor = new Scanner(System.in);
 
 		System.out.println();
@@ -22,6 +22,7 @@ public class RetanguloDao {
 
 		retangulo.mostrarDados();
 
-		leitor.close();
+		Menu.continuar(leitor, "Gabryel");
+
 	}
 }
